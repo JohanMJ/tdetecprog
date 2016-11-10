@@ -11,12 +11,13 @@ namespace TDE_TEC_PROG_ll
 {
     public partial class Periodo : System.Web.UI.UserControl
     {
-        string strConexao = @"Data Source=JOHAN-PC\SQLEXPRESS; Initial Catalog=tde_tec_prog_II; Integrated Security=true;";
+        string strConexao = @"Data Source=DESKTOP-PP69BLK\SQLEXPRESS; Initial Catalog=parcial_ii; Integrated Security=true;";
 
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
+        
 
         protected void ddlSubject_Load(object sender, EventArgs e)
         {
@@ -28,12 +29,12 @@ namespace TDE_TEC_PROG_ll
 
                 try
                 {
-                    SqlDataAdapter adapter = new SqlDataAdapter("SELECT idDisciplina, nome_disciplina FROM tde_tec_prog_II.dbo.Disciplina", con);
+                    SqlDataAdapter adapter = new SqlDataAdapter("SELECT idCurso, nome_curso FROM Curso", con);
                     adapter.Fill(subjects);
 
                     ddlSubject.DataSource = subjects;
-                    ddlSubject.DataTextField = "nome_disciplina";
-                    ddlSubject.DataValueField = "idDisciplina";
+                    ddlSubject.DataTextField = "nome_curso";
+                    ddlSubject.DataValueField = "idCurso";
                     ddlSubject.DataBind();
                 }
                 catch (Exception ex)
@@ -51,9 +52,9 @@ namespace TDE_TEC_PROG_ll
             try
             {
                 conexao.Open();
-                String insert = "INSERT INTO Periodo (idDisciplina, numero_periodo) VALUES (@idDisciplina, @numero)";
+                String insert = "INSERT INTO Periodo (idCurso_fk, numero_periodo) VALUES (@idCurso_fk, @numero)";
                 SqlCommand comando = new SqlCommand(insert, conexao);
-                comando.Parameters.Add(new SqlParameter("@idDisciplina", ddlSubject.SelectedValue));
+                comando.Parameters.Add(new SqlParameter("@idCurso_fk", ddlSubject.SelectedValue));
                 comando.Parameters.Add(new SqlParameter("@numero", numeroPeriodo.Value));
 
                 int i = comando.ExecuteNonQuery();

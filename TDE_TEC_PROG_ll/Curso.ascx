@@ -6,8 +6,6 @@
 <script src="Scripts/jquery-3.1.1.min.js"></script>
 <script src="Scripts/bootstrap.min.js"></script>
 
-
-
 <div class="container">
     <div class="row">
         <div class="panel panel-primary">
@@ -19,9 +17,6 @@
                     <label class="control-label" for="nomeCurso">Nome Curso</label>
                     <input id="nomeCurso" type="text" maxlength="50" class="form-control" runat="server">
                 </div>
-
-                <asp:DropDownList ID="ddlSubject" runat="server" AppendDataBoundItems="true" OnLoad="ddlSubject_Load">
-                </asp:DropDownList>
 
                 <div class="form-group">
                     <asp:Button ID="adicionarCurso" runat="server" Text="Cadastrar Curso" class="btn btn-info btn-block" OnClick="adicionarCurso_Click" />

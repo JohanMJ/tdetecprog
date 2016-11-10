@@ -31,3 +31,36 @@ C:\Users\Johan\documents\visual studio 2015\Projects\TDE_TEC_PROG_ll\TDE_TEC_PRO
 C:\Users\Johan\documents\visual studio 2015\Projects\TDE_TEC_PROG_ll\TDE_TEC_PROG_ll\obj\Debug\TDE_TEC_PROG_ll.dll
 C:\Users\Johan\documents\visual studio 2015\Projects\TDE_TEC_PROG_ll\TDE_TEC_PROG_ll\obj\Debug\TDE_TEC_PROG_ll.pdb
 C:\Users\Johan\documents\visual studio 2015\Projects\TDE_TEC_PROG_ll\TDE_TEC_PROG_ll\obj\Debug\TDE_TEC_PROG_ll.csprojResolveAssemblyReference.cache
+C:\Users\Felipe\Documents\PUC\Tecnologias de Programação II\Trabalho_Parcial_2\TDE_TEC_PROG_ll\bin\ApplicationInsights.config
+C:\Users\Felipe\Documents\PUC\Tecnologias de Programação II\Trabalho_Parcial_2\TDE_TEC_PROG_ll\bin\roslyn\csc.exe
+C:\Users\Felipe\Documents\PUC\Tecnologias de Programação II\Trabalho_Parcial_2\TDE_TEC_PROG_ll\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Felipe\Documents\PUC\Tecnologias de Programação II\Trabalho_Parcial_2\TDE_TEC_PROG_ll\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Felipe\Documents\PUC\Tecnologias de Programação II\Trabalho_Parcial_2\TDE_TEC_PROG_ll\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Felipe\Documents\PUC\Tecnologias de Programação II\Trabalho_Parcial_2\TDE_TEC_PROG_ll\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Felipe\Documents\PUC\Tecnologias de Programação II\Trabalho_Parcial_2\TDE_TEC_PROG_ll\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Felipe\Documents\PUC\Tecnologias de Programação II\Trabalho_Parcial_2\TDE_TEC_PROG_ll\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Felipe\Documents\PUC\Tecnologias de Programação II\Trabalho_Parcial_2\TDE_TEC_PROG_ll\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Felipe\Documents\PUC\Tecnologias de Programação II\Trabalho_Parcial_2\TDE_TEC_PROG_ll\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Felipe\Documents\PUC\Tecnologias de Programação II\Trabalho_Parcial_2\TDE_TEC_PROG_ll\bin\roslyn\vbc.exe
+C:\Users\Felipe\Documents\PUC\Tecnologias de Programação II\Trabalho_Parcial_2\TDE_TEC_PROG_ll\bin\roslyn\VBCSCompiler.exe
+C:\Users\Felipe\Documents\PUC\Tecnologias de Programação II\Trabalho_Parcial_2\TDE_TEC_PROG_ll\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Felipe\Documents\PUC\Tecnologias de Programação II\Trabalho_Parcial_2\TDE_TEC_PROG_ll\bin\TDE_TEC_PROG_ll.dll.config
+C:\Users\Felipe\Documents\PUC\Tecnologias de Programação II\Trabalho_Parcial_2\TDE_TEC_PROG_ll\bin\TDE_TEC_PROG_ll.dll
+C:\Users\Felipe\Documents\PUC\Tecnologias de Programação II\Trabalho_Parcial_2\TDE_TEC_PROG_ll\bin\TDE_TEC_PROG_ll.pdb
+C:\Users\Felipe\Documents\PUC\Tecnologias de Programação II\Trabalho_Parcial_2\TDE_TEC_PROG_ll\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Felipe\Documents\PUC\Tecnologias de Programação II\Trabalho_Parcial_2\TDE_TEC_PROG_ll\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Felipe\Documents\PUC\Tecnologias de Programação II\Trabalho_Parcial_2\TDE_TEC_PROG_ll\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Felipe\Documents\PUC\Tecnologias de Programação II\Trabalho_Parcial_2\TDE_TEC_PROG_ll\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Felipe\Documents\PUC\Tecnologias de Programação II\Trabalho_Parcial_2\TDE_TEC_PROG_ll\bin\Microsoft.AI.Web.dll
+C:\Users\Felipe\Documents\PUC\Tecnologias de Programação II\Trabalho_Parcial_2\TDE_TEC_PROG_ll\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Felipe\Documents\PUC\Tecnologias de Programação II\Trabalho_Parcial_2\TDE_TEC_PROG_ll\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Felipe\Documents\PUC\Tecnologias de Programação II\Trabalho_Parcial_2\TDE_TEC_PROG_ll\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Felipe\Documents\PUC\Tecnologias de Programação II\Trabalho_Parcial_2\TDE_TEC_PROG_ll\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Felipe\Documents\PUC\Tecnologias de Programação II\Trabalho_Parcial_2\TDE_TEC_PROG_ll\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Felipe\Documents\PUC\Tecnologias de Programação II\Trabalho_Parcial_2\TDE_TEC_PROG_ll\bin\Microsoft.AI.Web.xml
+C:\Users\Felipe\Documents\PUC\Tecnologias de Programação II\Trabalho_Parcial_2\TDE_TEC_PROG_ll\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Felipe\Documents\PUC\Tecnologias de Programação II\Trabalho_Parcial_2\TDE_TEC_PROG_ll\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Felipe\Documents\PUC\Tecnologias de Programação II\Trabalho_Parcial_2\TDE_TEC_PROG_ll\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Felipe\Documents\PUC\Tecnologias de Programação II\Trabalho_Parcial_2\TDE_TEC_PROG_ll\obj\Debug\TDE_TEC_PROG_ll.csprojResolveAssemblyReference.cache
+C:\Users\Felipe\Documents\PUC\Tecnologias de Programação II\Trabalho_Parcial_2\TDE_TEC_PROG_ll\obj\Debug\TDE_TEC_PROG_ll.dll
+C:\Users\Felipe\Documents\PUC\Tecnologias de Programação II\Trabalho_Parcial_2\TDE_TEC_PROG_ll\obj\Debug\TDE_TEC_PROG_ll.pdb

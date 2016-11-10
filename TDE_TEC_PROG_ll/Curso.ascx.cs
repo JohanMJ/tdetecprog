@@ -11,44 +11,9 @@ namespace TDE_TEC_PROG_ll
 {
     public partial class Curso : System.Web.UI.UserControl
     {
-        string strConexao = @"Data Source=JOHAN-PC\SQLEXPRESS; Initial Catalog=tde_tec_prog_II; Integrated Security=true;";
+        string strConexao = @"Data Source=DESKTOP-PP69BLK\SQLEXPRESS; Initial Catalog=parcial_ii; Integrated Security=true;";
         protected void Page_Load(object sender, EventArgs e)
         {
-
-        }
-
-        
-        protected void ddlSubject_Load(object sender, EventArgs e)
-        {
-
-            DataTable subjects = new DataTable();
-
-            using (SqlConnection con = new SqlConnection(strConexao))
-            {
-
-                try
-                {
-                    SqlDataAdapter adapter = new SqlDataAdapter("SELECT idPeriodo, numero_periodo FROM tde_tec_prog_II.dbo.Periodo", con);
-
-                    adapter.Fill(subjects);
-
-
-                    ddlSubject.DataSource = subjects;
-                    ddlSubject.DataTextField = "numero_periodo";
-                    ddlSubject.DataValueField = "idPeriodo";
-                    ddlSubject.DataBind();
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-                finally
-                {
-                    con.Close();
-                }
-
-            }
-            ddlSubject.Items.Insert(0, new ListItem("Periodos Disponiveis", "0"));
 
         }
 
@@ -59,9 +24,8 @@ namespace TDE_TEC_PROG_ll
             {
 
                 conexao.Open();
-                String insert = "INSERT INTO Curso (idPeriodo, nome_curso) VALUES (@idPeriodo, @nome)";
+                String insert = "INSERT INTO Curso (nome_curso) VALUES (@nome)";
                 SqlCommand comando = new SqlCommand(insert, conexao);
-                comando.Parameters.Add(new SqlParameter("@idPeriodo", ddlSubject.SelectedValue));
                 comando.Parameters.Add(new SqlParameter("@nome", nomeCurso.Value));
 
                 int i = comando.ExecuteNonQuery();

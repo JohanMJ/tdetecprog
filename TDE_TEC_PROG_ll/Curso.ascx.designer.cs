@@ -22,15 +22,6 @@ namespace TDE_TEC_PROG_ll {
         protected global::System.Web.UI.HtmlControls.HtmlInputText nomeCurso;
         
         /// <summary>
-        /// ddlSubject control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlSubject;
-        
-        /// <summary>
         /// adicionarCurso control.
         /// </summary>
         /// <remarks>

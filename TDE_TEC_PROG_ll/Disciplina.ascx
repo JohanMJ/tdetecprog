@@ -37,6 +37,10 @@
 						<div class="form-group">
                             <asp:Button ID="AdicionarDisciplina" runat="server" text="Cadastrar Disciplina"  class="btn btn-info btn-block" OnClick="AdicionarDisciplina_Click" />
 						</div>
+                        <div class="form-group">
+                            <asp:DropDownList id="ddlSubject" AppendDataBoundItems="true" 
+                                OnLoad="ddlSubject_Load" runat="server"></asp:DropDownList>
+                        </div>
 				</div>
 			</div>
 		</div>

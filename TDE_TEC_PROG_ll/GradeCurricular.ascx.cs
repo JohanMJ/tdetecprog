@@ -11,7 +11,7 @@ namespace TDE_TEC_PROG_ll
 {
     public partial class GradeCurricular : System.Web.UI.UserControl
     {
-        string strConexao = @"Data Source=JOHAN-PC\SQLEXPRESS; Initial Catalog=tde_tec_prog_II; Integrated Security=true;";
+        string strConexao = @"Data Source=DESKTOP-PP69BLK\SQLEXPRESS; Initial Catalog=parcial_ii; Integrated Security=true;";
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -23,7 +23,7 @@ namespace TDE_TEC_PROG_ll
         private void BindGridView()
         {
 
-            DataTable dt = new DataTable();
+           /* DataTable dt = new DataTable();
             SqlConnection connection = new SqlConnection(strConexao);
             
             try
@@ -53,7 +53,7 @@ namespace TDE_TEC_PROG_ll
             finally
             {
                 connection.Close();
-            }
-        }
+            }*/
+        } 
     }
 }

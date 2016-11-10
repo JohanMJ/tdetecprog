@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -10,7 +11,7 @@ namespace TDE_TEC_PROG_ll
 {
     public partial class Disciplina : System.Web.UI.UserControl
     {
-        string strConexao = @"Data Source=JOHAN-PC\SQLEXPRESS; Initial Catalog=tde_tec_prog_II; Integrated Security=true;";
+        string strConexao = @"Data Source=DESKTOP-PP69BLK\SQLEXPRESS; Initial Catalog=parcial_ii; Integrated Security=true;";
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -45,6 +46,40 @@ namespace TDE_TEC_PROG_ll
                 conexao.Close();
                 Response.Redirect("~/Home.aspx");
             }
+        }
+
+        protected void ddlSubject_Load(object sender, EventArgs e)
+        {
+
+            DataTable subjects = new DataTable();
+
+            using (SqlConnection con = new SqlConnection(strConexao))
+            {
+
+                try
+                {
+                    SqlDataAdapter adapter = new SqlDataAdapter("SELECT idPeriodo, numero_periodo FROM Periodo", con);
+
+                    adapter.Fill(subjects);
+
+
+                    ddlSubject.DataSource = subjects;
+                    ddlSubject.DataTextField = "numero_periodo";
+                    ddlSubject.DataValueField = "idPeriodo";
+                    ddlSubject.DataBind();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                finally
+                {
+                    con.Close();
+                }
+
+            }
+            ddlSubject.Items.Insert(0, new ListItem("Periodos Disponiveis", "0"));
+
         }
     }
 }
