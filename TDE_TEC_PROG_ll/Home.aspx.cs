@@ -17,23 +17,35 @@ namespace TDE_TEC_PROG_ll
 
         protected void homeCadastrarPeriodo_Click(object sender, EventArgs e)
         {
-            Periodo.Visible = true;
+            closeOthers();
+            Periodo.Visible = !(Periodo.Visible);         
         }
 
         protected void homeCadastrarCurso_Click(object sender, EventArgs e)
         {
-            Curso.Visible = true;
+            closeOthers();
+            Curso.Visible = !(Curso.Visible);
         }
 
         protected void homeCadastrarDisciplina_Click(object sender, EventArgs e)
         {
-            Disciplina.Visible = true;
+            closeOthers();
+            Disciplina.Visible = !(Disciplina.Visible);
         }
 
 
         protected void homeGradeCurricular_Click(object sender, EventArgs e)
         {
-            GradeCurricular.Visible = true;
+            closeOthers();
+            GradeCurricular.Visible = !(this.GradeCurricular.Visible);
+        }
+
+        private void closeOthers()
+        {
+            if (Periodo.Visible) Periodo.Visible = false;
+            if (Curso.Visible) Curso.Visible = false;
+            if (Disciplina.Visible) Disciplina.Visible = false;
+            if (GradeCurricular.Visible) GradeCurricular.Visible = false;
         }
     }
 }

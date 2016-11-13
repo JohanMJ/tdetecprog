@@ -22,13 +22,13 @@ namespace TDE_TEC_PROG_ll {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// homeCadastrarDisciplina control.
+        /// homeCadastrarCurso control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button homeCadastrarDisciplina;
+        protected global::System.Web.UI.WebControls.Button homeCadastrarCurso;
         
         /// <summary>
         /// homeCadastrarPeriodo control.
@@ -40,13 +40,13 @@ namespace TDE_TEC_PROG_ll {
         protected global::System.Web.UI.WebControls.Button homeCadastrarPeriodo;
         
         /// <summary>
-        /// homeCadastrarCurso control.
+        /// homeCadastrarDisciplina control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button homeCadastrarCurso;
+        protected global::System.Web.UI.WebControls.Button homeCadastrarDisciplina;
         
         /// <summary>
         /// homeGradeCurricular control.

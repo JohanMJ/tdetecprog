@@ -6,75 +6,47 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using TDE_TEC_PROG_ll.Dao;
 
 namespace TDE_TEC_PROG_ll
 {
     public partial class Periodo : System.Web.UI.UserControl
     {
-        string strConexao = @"Data Source=DESKTOP-PP69BLK\SQLEXPRESS; Initial Catalog=parcial_ii; Integrated Security=true;";
+        private PeriodoDao periodoDao;
+
+        public Periodo()
+        {
+            this.periodoDao = new PeriodoDao();
+        }
 
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-        
 
         protected void ddlSubject_Load(object sender, EventArgs e)
         {
-
             DataTable subjects = new DataTable();
+            SqlDataAdapter adapter = periodoDao.adapter();
 
-            using (SqlConnection con = new SqlConnection(strConexao))
-            {
+            adapter.Fill(subjects);
+            ddlSubject.DataSource = subjects;
+            ddlSubject.DataTextField = "nome_curso";
+            ddlSubject.DataValueField = "idCurso";
+            ddlSubject.DataBind();
 
-                try
-                {
-                    SqlDataAdapter adapter = new SqlDataAdapter("SELECT idCurso, nome_curso FROM Curso", con);
-                    adapter.Fill(subjects);
-
-                    ddlSubject.DataSource = subjects;
-                    ddlSubject.DataTextField = "nome_curso";
-                    ddlSubject.DataValueField = "idCurso";
-                    ddlSubject.DataBind();
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-
-            }
             ddlSubject.Items.Insert(0, new ListItem("Disciplinas Disponiveis", "0"));
         }
 
         protected void adicionarPeriodo_Click(object sender, EventArgs e)
         {
-            SqlConnection conexao = new SqlConnection(strConexao);
-            try
-            {
-                conexao.Open();
-                String insert = "INSERT INTO Periodo (idCurso_fk, numero_periodo) VALUES (@idCurso_fk, @numero)";
-                SqlCommand comando = new SqlCommand(insert, conexao);
-                comando.Parameters.Add(new SqlParameter("@idCurso_fk", ddlSubject.SelectedValue));
-                comando.Parameters.Add(new SqlParameter("@numero", numeroPeriodo.Value));
+            int numeroPeriodo = int.Parse(this.numeroPeriodo.Value);
+            int idCurso_fk = int.Parse(this.ddlSubject.SelectedValue);
 
-                int i = comando.ExecuteNonQuery();
+            Models.Periodo novoPeriodo = new Models.Periodo(numeroPeriodo, idCurso_fk);
 
-                if (i != 0)
-                {
-                    Console.WriteLine("Correto!");
-                }
-            }
-            catch (Exception er)
-            {
-
-                Console.WriteLine(er.Message);
-            }
-            finally
-            {
-                conexao.Close();
+            if (periodoDao.salvar(novoPeriodo))
                 Response.Redirect("~/Home.aspx");
-
-            }
         }
 
 

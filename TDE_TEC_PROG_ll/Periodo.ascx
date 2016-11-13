@@ -20,7 +20,7 @@
                     <input id="numeroPeriodo" type="text" maxlength="50" class="form-control" runat="server">
                 </div>
 
-                <asp:DropDownList ID="ddlSubject" runat="server" AppendDataBoundItems="true" OnLoad="ddlSubject_Load">
+                <asp:DropDownList ID="ddlSubject" runat="server" AppendDataBoundItems="true" OnInit="ddlSubject_Load">
                 </asp:DropDownList>
 
                 <div class="form-group">

@@ -58,15 +58,6 @@ namespace TDE_TEC_PROG_ll {
         protected global::System.Web.UI.HtmlControls.HtmlInputText numeroAulasPraticas;
         
         /// <summary>
-        /// AdicionarDisciplina control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button AdicionarDisciplina;
-        
-        /// <summary>
         /// ddlSubject control.
         /// </summary>
         /// <remarks>
@@ -74,5 +65,14 @@ namespace TDE_TEC_PROG_ll {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlSubject;
+        
+        /// <summary>
+        /// AdicionarDisciplina control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button AdicionarDisciplina;
     }
 }

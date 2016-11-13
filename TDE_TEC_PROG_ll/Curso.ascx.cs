@@ -6,12 +6,19 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using TDE_TEC_PROG_ll.Dao;
 
 namespace TDE_TEC_PROG_ll
 {
     public partial class Curso : System.Web.UI.UserControl
     {
-        string strConexao = @"Data Source=DESKTOP-PP69BLK\SQLEXPRESS; Initial Catalog=parcial_ii; Integrated Security=true;";
+        private CursoDao cursoDao;
+
+        public Curso()
+        {
+            this.cursoDao = new CursoDao();
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -19,27 +26,10 @@ namespace TDE_TEC_PROG_ll
 
         protected void adicionarCurso_Click(object sender, EventArgs e)
         {
-            SqlConnection conexao = new SqlConnection(strConexao);
-            try
-            {
+            Models.Curso novoCurso = new Models.Curso(nomeCurso.Value);
 
-                conexao.Open();
-                String insert = "INSERT INTO Curso (nome_curso) VALUES (@nome)";
-                SqlCommand comando = new SqlCommand(insert, conexao);
-                comando.Parameters.Add(new SqlParameter("@nome", nomeCurso.Value));
-
-                int i = comando.ExecuteNonQuery();
-            }
-            catch (Exception er)
-            {
-
-                Console.WriteLine(er.Message);
-            }
-            finally
-            {
-                conexao.Close();
-                Response.Redirect("~/Home.aspx");
-            }
+            if (cursoDao.salvar(novoCurso))
+                Response.Redirect("~/Home.aspx");  
         }
     }
 }

@@ -8,7 +8,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="panel panel-primary">
+        <div class="panel panel-prismary">
             <div class="panel-body">
                 <div class="form-group">
                     <h2>Adicionar Curso</h2>

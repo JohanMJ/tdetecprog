@@ -141,6 +141,10 @@
     <Compile Include="Curso.ascx.designer.cs">
       <DependentUpon>Curso.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Dao\CursoDao.cs" />
+    <Compile Include="Dao\Dao.cs" />
+    <Compile Include="Dao\DisciplinaDao.cs" />
+    <Compile Include="Dao\PeriodoDao.cs" />
     <Compile Include="Disciplina.ascx.cs">
       <DependentUpon>Disciplina.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -165,6 +169,9 @@
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Curso.cs" />
+    <Compile Include="Models\Disciplina.cs" />
+    <Compile Include="Models\Periodo.cs" />
     <Compile Include="Periodo.ascx.cs">
       <DependentUpon>Periodo.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -176,7 +183,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -6,12 +6,19 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using TDE_TEC_PROG_ll.Dao;
 
 namespace TDE_TEC_PROG_ll
 {
     public partial class Disciplina : System.Web.UI.UserControl
     {
-        string strConexao = @"Data Source=DESKTOP-PP69BLK\SQLEXPRESS; Initial Catalog=parcial_ii; Integrated Security=true;";
+        private DisciplinaDao disciplinaDao;
+
+        public Disciplina()
+        {
+            this.disciplinaDao = new DisciplinaDao();
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -19,67 +26,33 @@ namespace TDE_TEC_PROG_ll
 
         protected void AdicionarDisciplina_Click(object sender, EventArgs e)
         {
-            SqlConnection conexao = new SqlConnection(strConexao);
-            try
-            {
-                conexao.Open();
-                String insert = "INSERT INTO Disciplina (nome_disciplina, aulas_teoricas, aulas_praticas, hora_relogio, numero_credito) VALUES (@nome, @aulas_teoricas, @aulas_praticas, @hora_relogio, @numero_credito)";
-                SqlCommand comando = new SqlCommand(insert, conexao);
-                comando.Parameters.Add(new SqlParameter("@nome", nomeDisciplina.Value));
-                comando.Parameters.Add(new SqlParameter("@aulas_teoricas", numeroAulasTeoricas.Value));
-                comando.Parameters.Add(new SqlParameter("@aulas_praticas", numeroAulasPraticas.Value));
-                comando.Parameters.Add(new SqlParameter("@hora_relogio", horaRelogio.Value));
-                comando.Parameters.Add(new SqlParameter("@numero_credito", numeroCredito.Value));
-                int i = comando.ExecuteNonQuery();
-                if (i != 0)
-                {
-                    Console.WriteLine("Correto!");
+            string nomeDisciplina = this.nomeDisciplina.Value;
+            int aulasTeoricas = int.Parse(this.numeroAulasTeoricas.Value);
+            int aulasPraticas = int.Parse(this.numeroAulasPraticas.Value);
+            int horaRelogio = int.Parse(this.horaRelogio.Value);
+            int idPeriodo_fk = int.Parse(this.ddlSubject.SelectedValue);
 
-                }
-            }
-            catch (Exception er)
-            {
-                Console.WriteLine(er.Message);
-            }
-            finally
-            {
-                conexao.Close();
+            Models.Disciplina novaDisciplina = new Models.Disciplina(nomeDisciplina, aulasTeoricas, 
+                                                                        aulasPraticas, horaRelogio, 
+                                                                        idPeriodo_fk);
+            if (disciplinaDao.salvar(novaDisciplina))
                 Response.Redirect("~/Home.aspx");
-            }
         }
 
         protected void ddlSubject_Load(object sender, EventArgs e)
         {
-
+            SqlDataAdapter adapter;
             DataTable subjects = new DataTable();
 
-            using (SqlConnection con = new SqlConnection(strConexao))
-            {
+            adapter = disciplinaDao.adapter();
 
-                try
-                {
-                    SqlDataAdapter adapter = new SqlDataAdapter("SELECT idPeriodo, numero_periodo FROM Periodo", con);
-
-                    adapter.Fill(subjects);
-
-
-                    ddlSubject.DataSource = subjects;
-                    ddlSubject.DataTextField = "numero_periodo";
-                    ddlSubject.DataValueField = "idPeriodo";
-                    ddlSubject.DataBind();
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-                finally
-                {
-                    con.Close();
-                }
-
-            }
+            adapter.Fill(subjects);
+            ddlSubject.DataSource = subjects;
+            ddlSubject.DataTextField = "numero_periodo";
+            ddlSubject.DataValueField = "idPeriodo";
+            ddlSubject.DataBind();
+ 
             ddlSubject.Items.Insert(0, new ListItem("Periodos Disponiveis", "0"));
-
         }
     }
 }

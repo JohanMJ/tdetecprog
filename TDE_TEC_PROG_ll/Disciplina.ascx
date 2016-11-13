@@ -33,14 +33,14 @@
                          <div class="form-group">
 							<label class="control-label" for="numeroAulasPraticas;">Num. Aulas Praticas</label>
 							<input id="numeroAulasPraticas" type="text" class="form-control" runat="server">
-						</div>				
-						<div class="form-group">
-                            <asp:Button ID="AdicionarDisciplina" runat="server" text="Cadastrar Disciplina"  class="btn btn-info btn-block" OnClick="AdicionarDisciplina_Click" />
 						</div>
                         <div class="form-group">
                             <asp:DropDownList id="ddlSubject" AppendDataBoundItems="true" 
-                                OnLoad="ddlSubject_Load" runat="server"></asp:DropDownList>
-                        </div>
+                                OnInit="ddlSubject_Load" runat="server"></asp:DropDownList>
+                        </div>		
+						<div class="form-group">
+                            <asp:Button ID="AdicionarDisciplina" runat="server" text="Cadastrar Disciplina"  class="btn btn-info btn-block" OnClick="AdicionarDisciplina_Click" />
+						</div>
 				</div>
 			</div>
 		</div>

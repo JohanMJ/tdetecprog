@@ -19,9 +19,9 @@
     <form id="form1" runat="server">
         <div>
 
-            <asp:Button ID="homeCadastrarDisciplina" runat="server" Text="Cadastrar Disciplina" class="btn btn-info btn-block" OnClick="homeCadastrarDisciplina_Click" />
-            <asp:Button ID="homeCadastrarPeriodo" runat="server" Text="Cadastrar Periodo" class="btn btn-info btn-block" OnClick="homeCadastrarPeriodo_Click" />
             <asp:Button ID="homeCadastrarCurso" runat="server" Text="Cadastrar Curso" class="btn btn-info btn-block" OnClick="homeCadastrarCurso_Click" />
+            <asp:Button ID="homeCadastrarPeriodo" runat="server" Text="Cadastrar Periodo" class="btn btn-info btn-block" OnClick="homeCadastrarPeriodo_Click" />
+            <asp:Button ID="homeCadastrarDisciplina" runat="server" Text="Cadastrar Disciplina" class="btn btn-info btn-block" OnClick="homeCadastrarDisciplina_Click" />
             <asp:Button ID="homeGradeCurricular" runat="server" Text="Grade Curricular" class="btn btn-info btn-block" OnClick="homeGradeCurricular_Click" />
 
             <DisciplinaForm:Disciplina ID="Disciplina" runat="server" Visible="false" />
