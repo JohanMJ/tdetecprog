@@ -1,6 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Curso.ascx.cs" Inherits="TDE_TEC_PROG_ll.Curso" %>
 
-
 <link href="Content/bootstrap.css" rel="stylesheet" />
 <link href="Content/bootstrap.min.css" rel="stylesheet" />
 <script src="Scripts/jquery-3.1.1.min.js"></script>
@@ -8,7 +7,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="panel panel-prismary">
+        <div class="panel panel-primary">
             <div class="panel-body">
                 <div class="form-group">
                     <h2>Adicionar Curso</h2>

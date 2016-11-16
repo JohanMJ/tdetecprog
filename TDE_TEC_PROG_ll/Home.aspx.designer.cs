@@ -58,6 +58,33 @@ namespace TDE_TEC_PROG_ll {
         protected global::System.Web.UI.WebControls.Button homeGradeCurricular;
         
         /// <summary>
+        /// cursoBloco control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl cursoBloco;
+        
+        /// <summary>
+        /// periodoBloco control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl periodoBloco;
+        
+        /// <summary>
+        /// disciplinaBloco control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl disciplinaBloco;
+        
+        /// <summary>
         /// Disciplina control.
         /// </summary>
         /// <remarks>
@@ -92,5 +119,23 @@ namespace TDE_TEC_PROG_ll {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::TDE_TEC_PROG_ll.GradeCurricular GradeCurricular;
+        
+        /// <summary>
+        /// CursoBuscar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::TDE_TEC_PROG_ll.CursoBuscar CursoBuscar;
+        
+        /// <summary>
+        /// DisciplinaBuscar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::TDE_TEC_PROG_ll.DisciplinaBuscar DisciplinaBuscar;
     }
 }

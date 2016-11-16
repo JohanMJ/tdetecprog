@@ -103,7 +103,11 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Curso.ascx" />
+    <Content Include="CursoBuscar.ascx" />
+    <Content Include="CursoDetalhes.aspx" />
     <Content Include="Disciplina.ascx" />
+    <Content Include="DisciplinaBuscar.ascx" />
+    <Content Include="DisciplinaDetalhes.aspx" />
     <Content Include="GradeCurricular.ascx" />
     <Content Include="Home.aspx" />
     <Content Include="packages.config" />
@@ -118,6 +122,7 @@
     <Content Include="Content\bootstrap-reboot.min.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="WebForm1.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -141,6 +146,20 @@
     <Compile Include="Curso.ascx.designer.cs">
       <DependentUpon>Curso.ascx</DependentUpon>
     </Compile>
+    <Compile Include="CursoBuscar.ascx.cs">
+      <DependentUpon>CursoBuscar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CursoBuscar.ascx.designer.cs">
+      <DependentUpon>CursoBuscar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CursoDetalhes.aspx.cs">
+      <DependentUpon>CursoDetalhes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CursoDetalhes.aspx.designer.cs">
+      <DependentUpon>CursoDetalhes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Dao\CursoDao.cs" />
     <Compile Include="Dao\Dao.cs" />
     <Compile Include="Dao\DisciplinaDao.cs" />
@@ -151,6 +170,20 @@
     </Compile>
     <Compile Include="Disciplina.ascx.designer.cs">
       <DependentUpon>Disciplina.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DisciplinaBuscar.ascx.cs">
+      <DependentUpon>DisciplinaBuscar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DisciplinaBuscar.ascx.designer.cs">
+      <DependentUpon>DisciplinaBuscar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DisciplinaDetalhes.aspx.cs">
+      <DependentUpon>DisciplinaDetalhes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DisciplinaDetalhes.aspx.designer.cs">
+      <DependentUpon>DisciplinaDetalhes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -180,6 +213,13 @@
       <DependentUpon>Periodo.ascx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -5,8 +5,6 @@
 <script src="Scripts/jquery-3.1.1.min.js"></script>
 <script src="Scripts/bootstrap.min.js"></script>
 
-
-
 <div class="container">
 		<div class="row">
 			<div class="panel panel-primary">
